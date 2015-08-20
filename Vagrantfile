@@ -6,6 +6,10 @@ Vagrant.configure(2) do |config|
   # Set vagrant box.
   config.vm.box = "puppetlabs/centos-6.6-64-nocm"
 
+  #=============================================================================
+  # Provisioning.
+  #=============================================================================
+
   # Yum packages.
   config.vm.provision "shell", 
     path: "script/yum.sh",
@@ -16,14 +20,21 @@ Vagrant.configure(2) do |config|
     path: "script/rc.sh",
     privileged: false
 
-  # Miniconda install.
+  # Miniconda.
   config.vm.provision "shell",
     path: "script/miniconda_install.sh",
     privileged: false
 
-  # Miniconda packages install.
+  # Miniconda packages.
   config.vm.provision "shell",
     path: "script/miniconda_packages.sh",
     privileged: false
+
+  # GCC.
+  config.vm.provision "shell",
+    path: "script/gcc.sh",
+    privileged: false
+
+  # TODO: ccache
 
 end
