@@ -30,11 +30,6 @@ Vagrant.configure(2) do |config|
     path: "script/miniconda_packages.sh",
     privileged: false
 
-  # GCC.
-  config.vm.provision "shell",
-    path: "script/gcc.sh",
-    privileged: false
-
   # TODO: ccache
 
 end
