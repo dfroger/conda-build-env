@@ -4,7 +4,7 @@
 Vagrant.configure(2) do |config|
 
   # Set vagrant box.
-  config.vm.box = "puppetlabs/centos-6.6-64-nocm"
+  config.vm.box = "puppetlabs/centos-5.11-64-nocm"
 
   #=============================================================================
   # Provisioning.
