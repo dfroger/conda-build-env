@@ -4,4 +4,4 @@ conda install --yes \
     jinja2 \
     anaconda-client
 
-conda install --yes --channel stuarteberg gcc=4.8.4.99
+conda install --yes --channel asmeurer gcc=4.8.5
